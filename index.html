@@ -1,65 +1,469 @@
-<!-- 
-    The home page is design and implemented by Tong Chen in 2021. 
-    Some configuration of HTML and CSS is adapted from JonBarron's home page (https://jonbarron.info/). Many thanks!
--->
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tong Chen</title>
+    <meta name="author" content="Tong Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/fa-home.svg" type="image/svg">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tong Chen</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="font.css">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" type="image/svg" href="images/fa-home.svg">
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQBDSNNMNP"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-NQBDSNNMNP');
-	</script>
-</head>
-<body>
-<div style="min-width: 300px; max-width: 600px; padding: 50px 5% 0 5%; margin: auto;">
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          
+          <!-- Header Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Tong Chen
+                </p>
+                <p>
+                  I am a Ph.D. student in Computer Science at the <a href="https://www.cs.washington.edu/">University of Washington</a> advised by <a href="https://www.cs.washington.edu/people/faculty/lsz">Luke Zettlemoyer</a> and <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a>. My research focuses on Natural Language Processing and Machine Learning, specifically how language models can effectively integrate and utilize knowledge.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:chentong@cs.washington.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="data/TongChen-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://x.com/tomchen0">Twitter</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/ct123098/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/figure.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/figure.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
 
-	<div class="intro">
-		<img class="figure" alt="profile photo" src="images/figure.jpg"/>
-		<div class="info">
-			<p class="name">Tong Chen</p>
-			<p class="subname">CS (Yao Class) Undergraduate @THU-18</p>
-			<p class="links">
-				<!-- <a href="https://www.tongc.cool/">Home Page</a> -->
-				<!-- <span>/</span> -->
-				<a href="https://blog.tongc.cool/">Blog (Course Projects)</a>
-				<span>/</span>
-				<a href="https://github.com/ct123098/">Github</a>
+          <!-- Publications Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>📜 Selected Publications</h2>
+                <p>
+                  Please see my <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID">Google Scholar</a> for the full list.
+                </p>
+                <p>
+                  (*: equal contribution)
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
 
-			  <!-- <a href="mailto:jonbarron@gmail.com">Email</a> -->
-			  <!-- <a href="data/JonBarron-CV.pdf">CV</a> -->
-			  <!-- <a href="data/JonBarron-bio.txt">Bio</a>  -->
-			  <!-- <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Google Scholar</a> -->
-			  <!-- <a href="https://twitter.com/jon_barron">Twitter</a>  -->
-			  <!-- <a href="https://github.com/jonbarron/">Github</a> -->
-			</p>
-		</div>
-	</div>
+          <!-- Publication Entries -->
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-	<p class="desc">
-	Hi! I am a senior undergraduate student in Yao Class, Tsinghua University, majoring in Computer Science and Techonology.
-	I am facinated with the patterns and structures that emerge when spurious connections are untangled from chaotic, big data.
-	I have a broad interest in addressing algorithmic challenges associated with machine learing applications in the real world, especially biomecidine and healthcare. 
-	</p>
+            <tr onmouseout="parapo_stop()" onmouseover="parapo_start()" bgcolor="#ffffd0">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='parapo_image'>
+                    <img src='images/parapo.jpg' width="160">
+                  </div>
+                  <img src='images/parapo.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function parapo_start() {
+                    document.getElementById('parapo_image').style.opacity = "1";
+                  }
+                  function parapo_stop() {
+                    document.getElementById('parapo_image').style.opacity = "0";
+                  }
+                  parapo_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2504.14452">
+                  <span class="papertitle">ParaPO: Aligning Language Models to Reduce Verbatim Reproduction of Pre-training Data</span>
+                </a>
+                <br>
+                <strong>Tong Chen</strong>, Faeze Brahman, Jiacheng Liu, Niloofar Mireshghallah, Weijia Shi, Pang Wei Koh, Luke Zettlemoyer, Hannaneh Hajishirzi
+                <br>
+                <em>COLM</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2504.14452">arXiv</a>
+                <p></p>
+                <p>
+                  A novel approach to reduce verbatim reproduction of pre-training data in language models through alignment techniques.
+                </p>
+              </td>
+            </tr>
 
-	<p class="desc">
-	Recently, I worked with Professor Sheng Wang on a research project aiming to identify cancer-prognostic genes through the analysis of cancer gene expression data.
-	Previously, I worked at Microsoft Research Asia as a Start Leap intern (an unique program involving collaboration with Microsoft Research Asia and Redmond) mentored by Francis Y. Yan and Wenxue Cheng. We used reinforcement learing to improve the users' experience in video conferencing. 
-	I am also grateful to Professor Kaisheng Ma and Professor Chongjie Zhang, who gave me the opportunities to expose to extensive research training during my early years at Tsinghua. 
-	</p>
+            <tr onmouseout="genadapter_stop()" onmouseover="genadapter_start()" bgcolor="#ffffd0">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='genadapter_image'>
+                    <img src='images/genadapter.jpg' width="160">
+                  </div>
+                  <img src='images/genadapter.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function genadapter_start() {
+                    document.getElementById('genadapter_image').style.opacity = "1";
+                  }
+                  function genadapter_stop() {
+                    document.getElementById('genadapter_image').style.opacity = "0";
+                  }
+                  genadapter_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://openreview.net/forum?id=bc3sUsS6ck">
+                  <span class="papertitle">Generative Adapter: Contextualizing Language Models in Parameters with A Single Forward Pass</span>
+                </a>
+                <br>
+                <strong>Tong Chen</strong>, Hao Fang, Patrick Xia, Xiaodong Liu, Benjamin Van Durme, Luke Zettlemoyer, Jianfeng Gao, Hao Cheng
+                <br>
+                <em>ICLR</em>, 2025 &nbsp <font color="red"><strong>(Contributed Talk at NeurIPS 2024 Workshop on Adaptive Foundation Models)</strong></font>
+                <br>
+                <a href="https://openreview.net/forum?id=bc3sUsS6ck">OpenReview</a>
+                <p></p>
+                <p>
+                  An efficient method to contextualize language models through parameter adaptation with minimal computational overhead.
+                </p>
+              </td>
+            </tr>
 
-</div>
-</body>
+            <tr onmouseout="copybench_stop()" onmouseover="copybench_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='copybench_image'>
+                    <img src='images/copybench.jpg' width="160">
+                  </div>
+                  <img src='images/copybench.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function copybench_start() {
+                    document.getElementById('copybench_image').style.opacity = "1";
+                  }
+                  function copybench_stop() {
+                    document.getElementById('copybench_image').style.opacity = "0";
+                  }
+                  copybench_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://aclanthology.org/2024.emnlp-main.844/">
+                  <span class="papertitle">CopyBench: Measuring Literal and Non-literal Reproduction of Copyright-protected Text in Language Model Generation</span>
+                </a>
+                <br>
+                <strong>Tong Chen</strong>, Akari Asai*, Niloofar Mireshghallah*, Sewon Min, James Grimmelmann, Yejin Choi, Hannaneh Hajishirzi, Luke Zettlemoyer, Pang Wei Koh
+                <br>
+                <em>EMNLP</em>, 2024 &nbsp <font color="red"><strong>(Contributed Talk at NeurIPS 2024 Workshop on Regulatable ML)</strong></font>
+                <br>
+                <a href="https://aclanthology.org/2024.emnlp-main.844/">ACL Anthology</a>
+                <p></p>
+                <p>
+                  A comprehensive benchmark for evaluating copyright compliance in language model generation, distinguishing between literal and non-literal reproduction.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="densex_stop()" onmouseover="densex_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='densex_image'>
+                    <img src='images/densex.jpg' width="160">
+                  </div>
+                  <img src='images/densex.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function densex_start() {
+                    document.getElementById('densex_image').style.opacity = "1";
+                  }
+                  function densex_stop() {
+                    document.getElementById('densex_image').style.opacity = "0";
+                  }
+                  densex_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://aclanthology.org/2024.emnlp-main.845/">
+                  <span class="papertitle">Dense X Retrieval: What Retrieval Granularity Should We Use?</span>
+                </a>
+                <br>
+                <strong>Tong Chen</strong>, Hongwei Wang, Sihao Chen, Wenhao Yu, Kaixin Ma, Xinran Zhao, Hongming Zhang, Dong Yu
+                <br>
+                <em>EMNLP</em>, 2024 &nbsp <font color="red"><strong>(Officially integrated into LangChain and LlamaIndex)</strong></font>
+                <br>
+                <a href="https://aclanthology.org/2024.emnlp-main.845/">ACL Anthology</a>
+                <p></p>
+                <p>
+                  Investigation of optimal retrieval granularity for dense retrieval systems, with practical integration into popular frameworks.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="mixgr_stop()" onmouseover="mixgr_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='mixgr_image'>
+                    <img src='images/mixgr.jpg' width="160">
+                  </div>
+                  <img src='images/mixgr.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function mixgr_start() {
+                    document.getElementById('mixgr_image').style.opacity = "1";
+                  }
+                  function mixgr_stop() {
+                    document.getElementById('mixgr_image').style.opacity = "0";
+                  }
+                  mixgr_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2407.10691">
+                  <span class="papertitle">MixGR: Enhancing Retriever Generalization for Scientific Domain through Complementary Granularity</span>
+                </a>
+                <br>
+                Fengyu Cai, Xinran Zhao, <strong>Tong Chen</strong>, Sihao Chen, Hongming Zhang, Iryna Gurevych, Heinz Koeppl
+                <br>
+                <em>EMNLP</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2407.10691">arXiv</a>
+                <p></p>
+                <p>
+                  A method to improve retrieval generalization in scientific domains through complementary granularity approaches.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="beyondrelevance_stop()" onmouseover="beyondrelevance_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='beyondrelevance_image'>
+                    <img src='images/beyondrelevance.jpg' width="160">
+                  </div>
+                  <img src='images/beyondrelevance.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function beyondrelevance_start() {
+                    document.getElementById('beyondrelevance_image').style.opacity = "1";
+                  }
+                  function beyondrelevance_stop() {
+                    document.getElementById('beyondrelevance_image').style.opacity = "0";
+                  }
+                  beyondrelevance_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2405.02714">
+                  <span class="papertitle">Beyond Relevance: Evaluate and Improve Retrievers on Perspective Awareness</span>
+                </a>
+                <br>
+                Xinran Zhao, <strong>Tong Chen</strong>, Sihao Chen, Hongming Zhang, Tongshuang Wu
+                <br>
+                <em>COLM</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2405.02714">arXiv</a>
+                <p></p>
+                <p>
+                  Evaluation framework and improvements for retrieval systems focusing on perspective awareness beyond traditional relevance metrics.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="subsentence_stop()" onmouseover="subsentence_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='subsentence_image'>
+                    <img src='images/subsentence.jpg' width="160">
+                  </div>
+                  <img src='images/subsentence.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function subsentence_start() {
+                    document.getElementById('subsentence_image').style.opacity = "1";
+                  }
+                  function subsentence_stop() {
+                    document.getElementById('subsentence_image').style.opacity = "0";
+                  }
+                  subsentence_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://arxiv.org/abs/2311.04335">
+                  <span class="papertitle">Sub-Sentence Encoder: Contrastive Learning of Propositional Semantic Representations</span>
+                </a>
+                <br>
+                Sihao Chen, Hongming Zhang, <strong>Tong Chen</strong>, Ben Zhou, Wenhao Yu, Dian Yu, Baolin Peng, Hongwei Wang, Dan Roth, Dong Yu
+                <br>
+                <em>NAACL</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2311.04335">arXiv</a>
+                <p></p>
+                <p>
+                  Novel approach for learning propositional semantic representations through contrastive learning at the sub-sentence level.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="poisoning_stop()" onmouseover="poisoning_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='poisoning_image'>
+                    <img src='images/poisoning.jpg' width="160">
+                  </div>
+                  <img src='images/poisoning.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function poisoning_start() {
+                    document.getElementById('poisoning_image').style.opacity = "1";
+                  }
+                  function poisoning_stop() {
+                    document.getElementById('poisoning_image').style.opacity = "0";
+                  }
+                  poisoning_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://www.biorxiv.org/content/10.1101/2023.11.06.565928v2">
+                  <span class="papertitle">Poisoning Medical Knowledge Using Large Language Models</span>
+                </a>
+                <br>
+                Junwei Yang, Hanwen Xu, Srbuhi Mirzoyan, <strong>Tong Chen</strong>, Zixuan Liu, Zequn Liu, Wei Ju, Luchen Liu, Zhiping Xiao, Ming Zhang, Sheng Wang
+                <br>
+                <em>Nature Machine Intelligence</em>, 2024, volume 6, pages 1156–1168
+                <br>
+                <a href="https://www.biorxiv.org/content/10.1101/2023.11.06.565928v2">BioRxiv</a>
+                <p></p>
+                <p>
+                  Investigation of potential risks in medical knowledge systems when using large language models, highlighting security concerns.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="metacure_stop()" onmouseover="metacure_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='metacure_image'>
+                    <img src='images/metacure.jpg' width="160">
+                  </div>
+                  <img src='images/metacure.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function metacure_start() {
+                    document.getElementById('metacure_image').style.opacity = "1";
+                  }
+                  function metacure_stop() {
+                    document.getElementById('metacure_image').style.opacity = "0";
+                  }
+                  metacure_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="http://proceedings.mlr.press/v139/zhang21w.html">
+                  <span class="papertitle">MetaCURE: Meta Reinforcement Learning with Empowerment-Driven Exploration</span>
+                </a>
+                <br>
+                Jin Zhang*, Jianhao Wang*, Hao Hu, <strong>Tong Chen</strong>, Yingfeng Chen, Changjie Fan, Chongjie Zhang
+                <br>
+                <em>ICML</em>, 2021
+                <br>
+                <a href="http://proceedings.mlr.press/v139/zhang21w.html">Proceedings</a>
+                <p></p>
+                <p>
+                  Meta reinforcement learning approach using empowerment-driven exploration for improved learning efficiency.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="auxtraining_stop()" onmouseover="auxtraining_start()">
+              <td style="padding:16px;width:20%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='auxtraining_image'>
+                    <img src='images/auxtraining.jpg' width="160">
+                  </div>
+                  <img src='images/auxtraining.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function auxtraining_start() {
+                    document.getElementById('auxtraining_image').style.opacity = "1";
+                  }
+                  function auxtraining_stop() {
+                    document.getElementById('auxtraining_image').style.opacity = "0";
+                  }
+                  auxtraining_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:middle">
+                <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Auxiliary_Training_Towards_Accurate_and_Robust_Models_CVPR_2020_paper.html">
+                  <span class="papertitle">Auxiliary Training: Towards Accurate and Robust Models</span>
+                </a>
+                <br>
+                Linfeng Zhang, Muzhou Yu, <strong>Tong Chen</strong>, Zuoqiang Shi, Chenglong Bao, Kaisheng Ma
+                <br>
+                <em>CVPR</em>, 2020
+                <br>
+                <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Auxiliary_Training_Towards_Accurate_and_Robust_Models_CVPR_2020_paper.html">Open Access</a>
+                <p></p>
+                <p>
+                  Auxiliary training methodology for improving model accuracy and robustness in computer vision tasks.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <!-- Teaching & Service Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>🧑‍🏫 Teaching & Service</h2>
+                <p>
+                  <strong>Teaching Assistant:</strong><br>
+                  • UW CSE 446: Machine Learning (Au 2022, Au 2023, Sp 2024)
+                </p>
+                <p>
+                  <strong>Departmental Service:</strong><br>
+                  • Application Reviewer, Ph.D. Admissions Committee of UW Allen School (2023-25)<br>
+                  • Co-organizer of NLP Retreat (2023)<br>
+                  • Mentor, UW Allen School Mentoring Program for new Ph.D. students (2023)
+                </p>
+                <p>
+                  <strong>Paper Reviewer:</strong><br>
+                  • <strong>ACL Rolling Review (ACL, EMNLP, NAACL)</strong> 2024--25<br>
+                  • <strong>COLM</strong> 2025<br>
+                  • <strong>NeurIPS</strong> 2024--2025
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Research Experience Section -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>🔬 Research Experience</h2>
+                <p>
+                  <strong>University of Washington,</strong> 09/2022–Present<br>
+                  Ph.D. student, supervised by <a href="https://www.cs.washington.edu/people/faculty/lsz">Luke Zettlemoyer</a> and <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a>
+                </p>
+                <p>
+                  <strong>Microsoft Research,</strong> 06/2024–08/2024<br>
+                  Research Intern, supervised by <a href="#">Dr. Hao Cheng</a> and <a href="#">Dr. Hao Fang</a>
+                </p>
+                <p>
+                  <strong>Tencent AI Lab,</strong> 06/2023–09/2023<br>
+                  Research Intern, supervised by <a href="#">Dr. Hongwei Wang</a>, <a href="#">Dr. Hongming Zhang</a>, <a href="#">Dr. Wenhao Yu</a>, and <a href="#">Dr. Dong Yu</a>
+                </p>
+                <p>
+                  <strong>Microsoft Research Asia,</strong> 03/2021–09/2021<br>
+                  Research Intern, supervised by <a href="#">Dr. Francis Y. Yan</a> and <a href="#">Dr. Wenxue Cheng</a>
+                </p>
+                <p>
+                  <strong>Tsinghua University,</strong> 09/2018–06/2022<br>
+                  B.Eng. student, Yao Class, Institute for Interdisciplinary Information Sciences
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
 </html>
