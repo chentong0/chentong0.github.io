@@ -181,7 +181,7 @@ mark.todo {
     var(--bg);
 }
 .pub-title { display: block; color: var(--ink); font-weight: 600; font-size: 16px; line-height: 1.4; margin-bottom: 6px; }
-.pub-title:hover { color: var(--link); }
+a.pub-title:hover { color: var(--link); }
 .pub-authors { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0 0 10px; }
 .pub-authors strong { color: var(--ink); font-weight: 600; }
 .pub-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
