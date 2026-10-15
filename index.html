@@ -35,8 +35,7 @@
       <a href="#research">Research</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
-      <a href="#awards">Talks &amp; Awards</a>
+      <a href="#education">Education</a>
       <a class="nav-cv" href="#cv-todo">CV</a>
     </div>
     <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
@@ -49,7 +48,7 @@
 
   <!-- ======================= HERO ======================= -->
   <header class="hero">
-    <div>
+    <div class="hero-head">
       <!-- TODO: add Chinese name if wanted: <span class="cjk">…</span> -->
       <h1>Tong Chen</h1>
       <p class="kicker">// Ph.D. Candidate · University of Washington</p>
@@ -59,14 +58,41 @@
         <a href="https://www.cs.washington.edu/">University of Washington</a>, advised by
         <a href="https://homes.cs.washington.edu/~lsz/">Luke Zettlemoyer</a> and
         <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a>.
-        I study <b>how language models learn from experience</b>: training agents that turn past
-        trajectories into reusable knowledge, designing rewards that resist reward hacking, and
-        compiling context directly into parameters.
-      </p>
-      <p>
         I have interned at <b>Meta FAIR</b>, <b>AI2</b>, <b>Microsoft Research</b>, and <b>Tencent AI Lab</b>.
         Before UW, I studied in the Yao Class at <a href="https://iiis.tsinghua.edu.cn/en/">Tsinghua University</a>.
       </p>
+    </div>
+
+    <div class="hero-photo">
+      <img src="images/figure.jpg" alt="Photo of Tong Chen" width="190" height="190">
+    </div>
+
+    <div class="hero-body" id="research">
+      <p>My research focuses on <b>how language models learn from experience</b>:</p>
+      <ul class="agenda">
+        <li>
+          <b>Self-Improving Agents: Memory &amp; Continual Learning.</b>
+          I build agents that turn past experience into reusable knowledge: meta-optimizing how agents save and
+          load memory, training note-taking models with reinforcement learning across streams of tasks, compiling
+          context directly into model weights, and retrieving knowledge at the right granularity.<br>
+          <a href="#pub-metaopt">Agent Meta-Optimization</a> (FAIR'26) ·
+          <a href="#pub-notetaker">NoteTaker</a> (preprint) ·
+          <a href="https://openreview.net/forum?id=bc3sUsS6ck">Generative Adapter</a> (ICLR'25) ·
+          <a href="https://aclanthology.org/2024.emnlp-main.845/">Dense X Retrieval</a> (EMNLP'24)
+          <mark class="todo">TODO: FAIR paper short name, disclosure</mark>
+        </li>
+        <li>
+          <b>RL Post-Training &amp; Reward Design.</b>
+          I study how models learn to game the rewards they are trained on, and how to design rewards that resist
+          it: binary retrieval-augmented rewards that reduce hallucination without sacrificing other skills,
+          preference optimization against verbatim regurgitation of pre-training data, and benchmarks for literal
+          and non-literal copying in long-form generation.<br>
+          <a href="https://proceedings.mlr.press/v306/chen26a.html">Binary RAR</a> (ICML'26) ·
+          <a href="https://openreview.net/forum?id=Uic3ojVhXh">ParaPO</a> (COLM'25) ·
+          <a href="https://aclanthology.org/2024.emnlp-main.844/">CopyBench</a> (EMNLP'24)
+          <mark class="todo">TODO: ICML Oral or Spotlight?</mark>
+        </li>
+      </ul>
 
       <div class="market">
         <span class="dot" aria-hidden="true"></span>
@@ -86,82 +112,7 @@
         <li><a href="mailto:chentong@cs.washington.edu"><i class="fa-regular fa-envelope"></i>Email</a></li>
       </ul>
     </div>
-
-    <div class="hero-photo">
-      <img src="images/figure.jpg" alt="Photo of Tong Chen" width="200" height="200">
-    </div>
   </header>
-
-  <!-- ======================= RESEARCH HIGHLIGHTS ======================= -->
-  <section class="section" id="research">
-    <h2 class="section-title"><span class="hash">//</span>Research Highlights</h2>
-
-    <div class="themes">
-      <article class="theme">
-        <h3>Self-Improving Agents: Memory &amp; Continual Learning</h3>
-        <p class="frame">How can agents turn experience into knowledge that makes the next task easier?</p>
-        <ul>
-          <li>
-            <b>Meta-optimized agent memory.</b> At Meta FAIR, I built a loop in which a meta agent reads full task
-            trajectories and rewrites how an agent saves what it learned to files and loads it before the next task.
-            The discovered designs beat the best hand-written memory by <b>+12.8</b> points and summary-based
-            compaction by <b>+16.0</b>, while using the least context.
-            <mark class="todo">TODO: confirm Meta disclosure</mark>
-            <a href="#pub-metaopt">[P1]</a>
-          </li>
-          <li>
-            <b>Learning to take notes with RL.</b> NoteTaker trains a dedicated notebook model, crediting each
-            memory update only with the rewards of later tasks it could affect. A 9B notebook model outperforms
-            Fable-5.1 in the same role on AppWorld Test-Challenge (<b>25.8% vs. 23.0%</b>) and generalizes to
-            5&times; longer task streams and unseen task models.
-            <mark class="todo">TODO: confirm final numbers</mark>
-            <a href="#pub-notetaker">[P2]</a>
-          </li>
-          <li>
-            <b>Memory in weights.</b> Generative Adapter compiles context into adapter weights in a single forward
-            pass, improving StreamingQA F1 by <b>63.5%</b> over fine-tuning. <a href="#pub-genadapter">[P5]</a>
-          </li>
-          <li>
-            <b>Memory in retrieval.</b> Dense X introduced <em>propositions</em> as a retrieval unit, now
-            integrated into <b>LangChain</b> and <b>LlamaIndex</b>. <a href="#pub-densex">[P7]</a>
-          </li>
-        </ul>
-        <div class="chips">
-          <a href="#pub-metaopt"><b>Meta-Optimization</b> · FAIR 2026</a>
-          <a href="#pub-notetaker"><b>NoteTaker</b> · preprint</a>
-          <a href="#pub-genadapter"><b>Generative Adapter</b> · ICLR'25</a>
-          <a href="#pub-densex"><b>Dense X</b> · EMNLP'24</a>
-        </div>
-      </article>
-
-      <article class="theme">
-        <h3>RL Post-Training &amp; Reward Design</h3>
-        <p class="frame">Post-training optimizes proxies that models learn to game. I study when rewards get hacked and how to design ones that don't.</p>
-        <ul>
-          <li>
-            <b>Reward hacking in factuality RL.</b> Continuous factuality rewards can be gamed by making fewer or
-            vaguer claims. RL with a <em>binary</em> retrieval-augmented reward cuts long-form hallucination by
-            <b>39.3%</b> and teaches calibrated abstention (44.4% fewer wrong answers on PopQA), without hurting
-            instruction following, math, or coding. <a href="#pub-brar">[P3]</a>
-          </li>
-          <li>
-            <b>Reducing regurgitation.</b> ParaPO trains models to prefer paraphrases over memorized pre-training
-            text, reducing verbatim reproduction while keeping famous quotations available on request.
-            <a href="#pub-parapo">[P4]</a>
-          </li>
-          <li>
-            <b>Measuring copying.</b> CopyBench shows that alignment can reduce literal copying while
-            <em>increasing</em> non-literal copying of plots and characters. <a href="#pub-copybench">[P6]</a>
-          </li>
-        </ul>
-        <div class="chips">
-          <a href="#pub-brar"><b>Binary RAR</b> · ICML'26</a>
-          <a href="#pub-parapo"><b>ParaPO</b> · COLM'25</a>
-          <a href="#pub-copybench"><b>CopyBench</b> · EMNLP'24</a>
-        </div>
-      </article>
-    </div>
-  </section>
 
   <!-- ======================= NEWS ======================= -->
   <section class="section" id="news">
@@ -344,52 +295,9 @@
     </div>
   </section>
 
-  <!-- ======================= EXPERIENCE + EDUCATION ======================= -->
-  <section class="section" id="experience">
-    <h2 class="section-title"><span class="hash">//</span>Experience</h2>
-    <ul class="tl">
-      <li>
-        <time><mark class="todo">TODO</mark></time>
-        <div>
-          <span class="org">Meta FAIR</span> · <span class="role">Research Scientist Intern</span>
-          <p class="sub">with Swarnadeep Saha, Xian Li, Sainbayar Sukhbaatar, Jason Weston <mark class="todo">TODO: confirm mentors, dates</mark></p>
-          <p class="out">Meta-optimized memory for continual-learning agents <a href="#pub-metaopt">[P1]</a></p>
-        </div>
-      </li>
-      <li>
-        <time><mark class="todo">TODO</mark></time>
-        <div>
-          <span class="org">Allen Institute for AI (AI2)</span> · <span class="role">Research Intern</span>
-          <p class="sub">with Faeze Brahman <mark class="todo">TODO: confirm mentors, dates</mark></p>
-          <p class="out">Binary retrieval-augmented reward for factuality RL <a href="#pub-brar">[P3]</a></p>
-        </div>
-      </li>
-      <li>
-        <time>2024.06 – 08</time>
-        <div>
-          <span class="org">Microsoft Research</span> · <span class="role">Research Intern</span> · Redmond
-          <p class="sub">with Hao Cheng and Hao Fang</p>
-          <p class="out">Generative Adapter <a href="#pub-genadapter">[P5]</a></p>
-        </div>
-      </li>
-      <li>
-        <time>2023.06 – 09</time>
-        <div>
-          <span class="org">Tencent AI Lab</span> · <span class="role">Research Intern</span> · Seattle
-          <p class="sub">with Hongwei Wang, Hongming Zhang, Wenhao Yu, and Dong Yu</p>
-          <p class="out">Dense X Retrieval <a href="#pub-densex">[P7]</a> and Sub-Sentence Encoder <a href="#pub-subsentence">[NAACL'24]</a></p>
-        </div>
-      </li>
-      <li>
-        <time>2021.03 – 09</time>
-        <div>
-          <span class="org">Microsoft Research Asia</span> · <span class="role">Research Intern</span> · Beijing
-          <p class="sub">with Francis Y. Yan and Wenxue Cheng <mark class="todo">TODO: keep or drop?</mark></p>
-        </div>
-      </li>
-    </ul>
-
-    <h3 class="subhead" style="margin-top:32px">Education</h3>
+  <!-- ======================= EDUCATION ======================= -->
+  <section class="section" id="education">
+    <h2 class="section-title"><span class="hash">//</span>Education</h2>
     <ul class="tl">
       <li>
         <time>2022 – <mark class="todo">TODO</mark></time>
@@ -406,36 +314,6 @@
         </div>
       </li>
     </ul>
-  </section>
-
-  <!-- ======================= TALKS & AWARDS ======================= -->
-  <section class="section" id="awards">
-    <h2 class="section-title"><span class="hash">//</span>Talks &amp; Awards</h2>
-    <div class="two-col">
-      <div>
-        <h3 class="subhead">Talks</h3>
-        <ul class="tl">
-          <li><time>2024.12</time><div>Generative Adapter<p class="sub">Contributed talk, NeurIPS 2024 Workshop on Adaptive Foundation Models</p></div></li>
-          <li><time>2024.12</time><div>CopyBench<p class="sub">Contributed talk, NeurIPS 2024 Workshop on Regulatable ML</p></div></li>
-          <li><time><mark class="todo">TODO</mark></time><div><mark class="todo">TODO: invited talks, if any</mark></div></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="subhead">Honors</h3>
-        <ul class="tl">
-          <li><time>2021</time><div>Yao Award (Recognition Prize)<p class="sub">Tsinghua University</p></div></li>
-          <li><time>2020, 2021</time><div>Comprehensive Excellence Scholarship (top 10%)<p class="sub">Tsinghua University</p></div></li>
-          <li><time>2016, 2017</time><div>Gold Medal<p class="sub">National Olympiad in Informatics (NOI), China</p></div></li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 class="subhead" style="margin-top:32px">Service &amp; Teaching</h3>
-    <p class="service">
-      <b>Reviewer:</b> ACL Rolling Review (2024–25), NeurIPS (2024–25), ICLR (2025), COLM (2025) <mark class="todo">TODO: 2026</mark><br>
-      <b>Teaching:</b> TA for UW CSE 446 Machine Learning (Au'22, Au'23, Sp'24)<br>
-      <b>Department:</b> Ph.D. admissions reviewer, UW Allen School (2023–25); co-organizer, UW NLP Retreat (2023); mentor, Allen School Ph.D. mentoring program (2023)
-    </p>
   </section>
 
 </main>
