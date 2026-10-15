@@ -5,18 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tong Chen</title>
   <meta name="author" content="Tong Chen">
-  <meta name="description" content="Tong Chen, Ph.D. candidate at the University of Washington. Research on agents that learn from experience: memory, continual learning, and RL post-training.">
+  <meta name="description" content="Tong Chen, final-year Ph.D. student at the University of Washington. Research on agents that learn from experience: memory, continual learning, and RL post-training.">
   <link rel="icon" href="images/fa-home.svg" type="image/svg+xml">
-
-  <!-- Set theme before paint to avoid a flash -->
-  <script>
-    (function () {
-      var t = null;
-      try { t = localStorage.getItem("theme"); } catch (e) {}
-      if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      document.documentElement.setAttribute("data-theme", t);
-    })();
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,9 +26,6 @@
       <a href="#publications">Publications</a>
       <a class="nav-cv" href="#cv-todo">CV</a>
     </div>
-    <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
-    </button>
   </div>
 </nav>
 
@@ -49,10 +36,10 @@
     <div class="hero-head">
       <!-- TODO: add Chinese name if wanted: <span class="cjk">…</span> -->
       <h1>Tong Chen</h1>
-      <p class="kicker">// Ph.D. Candidate · University of Washington</p>
+      <p class="kicker">// Final-Year Ph.D. Student · University of Washington</p>
 
       <p>
-        I am a Ph.D. candidate in Computer Science at the
+        I am a final-year Ph.D. student in Computer Science at the
         <a href="https://www.cs.washington.edu/">University of Washington</a>, advised by
         <a href="https://homes.cs.washington.edu/~lsz/">Luke Zettlemoyer</a> and
         <a href="https://homes.cs.washington.edu/~hannaneh/">Hannaneh Hajishirzi</a>.
@@ -223,16 +210,6 @@
 <footer>
   <div class="wrap">Last updated October 2026</div>
 </footer>
-
-<script>
-  // Theme toggle
-  document.querySelector(".theme-toggle").addEventListener("click", function () {
-    var root = document.documentElement;
-    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    try { localStorage.setItem("theme", next); } catch (e) {}
-  });
-</script>
 
 </body>
 </html>
