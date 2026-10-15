@@ -69,10 +69,6 @@ mark.todo {
 .nav-links { display: flex; gap: 22px; margin-left: auto; align-items: center; }
 .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
 .nav-links a:hover { color: var(--ink); }
-.nav-links a.nav-cv {
-  color: var(--ink); border: 1px solid var(--line); background: var(--surface);
-  padding: 3px 12px; border-radius: 999px;
-}
 
 /* ---------- Hero ---------- */
 .hero { display: grid; grid-template-columns: 1fr 190px; column-gap: 40px; row-gap: 8px; align-items: start; padding: 64px 0 40px; }
@@ -107,7 +103,7 @@ mark.todo {
 /* ---------- Sections ---------- */
 .section { padding: 40px 0; border-top: 1px solid var(--line); }
 .section-title { font-family: var(--serif); font-size: 28px; font-weight: 600; margin: 0 0 22px; letter-spacing: -.005em; }
-.section-title .hash { font-family: var(--sans); font-weight: 300; color: var(--faint); margin-right: 6px; }
+.section-title .hash { font-family: var(--sans); font-weight: 300; color: var(--faint); margin-right: 10px; }
 .section-lead { color: var(--muted); margin-top: -8px; }
 
 /* ---------- News ---------- */
@@ -161,7 +157,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--f
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
-  .nav-links a:not(.nav-cv) { display: none; }
+  .nav-links { gap: 16px; }
   .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 36px; }
   .hero-photo { order: -1; }
   .hero-photo img { width: 128px; height: 128px; border-radius: 50%; }
