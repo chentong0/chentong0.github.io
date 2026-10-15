@@ -155,7 +155,7 @@ mark.todo {
 
 .pub-list { display: grid; gap: 14px; }
 .pub-card {
-  display: grid; grid-template-columns: 168px 1fr; gap: 22px;
+  display: grid; grid-template-columns: 192px 1fr; gap: 22px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
   padding: 18px; box-shadow: var(--shadow); scroll-margin-top: 80px;
 }
